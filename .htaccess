@@ -1,0 +1,9 @@
+Options -MultiViews
+Options -Indexes
+
+RewriteEngine On
+# assets can be loaded
+RewriteRule ^assets/(.*) $0 [L]
+# everything else must go to the app
+RewriteRule ^(.*)$ index.php [L]
+
